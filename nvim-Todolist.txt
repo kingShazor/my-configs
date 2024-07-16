@@ -1,0 +1,84 @@
+Vorteile: 
+ - konfigurierbar
+ - keine Wechsel zwischen Maus und Tastatur
+ - Splits (könnten nützlich sein)	
+
+Fragen:
+ - Teleskop pop-ups auch bei vim?
+ - 50::00 pathfinder blabla habe ich nicht verstanden
+ - how 
+
+Ideen erledigt: 
+ - Datei-Name - StatusZeile
+ - clangd - funktioniert
+ - Fehler ausgaben
+sollte gehen (Build-Inn)
+ - Rename (rn)
+ - Aufrufe suchen (Lösung: clangd rf-References)
+ - zwischen header und cpp wechseln (Lösung: clangd hat eine Integration)
+ - Alle Datein Schreibe :wall
+ - Wie akzeptiere ich ohne ohne 
+
+Ideen offen
+ - schnellsuche crtl+j (hat vim vielleicht?)
+ - auto-format (tps-codestyle)
+ - grep-lookup über die Dateien
+ - Code-Vorschlag: wie benutze ich
+- Kommentar + relative Zeilen in anderer Farbe
+ - diff
+ - File-Suche wie bei Eclipse (open Resource)
+ - clang-tidy ?
+ - Funktion kopieren
+ - auch einen language-server für Python installieren
+ - Wie Stelle ich den Font ein?
+
+ - xd-diagnostic (40:34) + ca-Quickfix
+ - jd (jump to definition)
+ c++-Ideen
+ - FMT:Print . Formatter wie in Python
+ - auto als Return-value?
+ - Namespace-Kommentar beim Schließen von namespace (kann)
+ 
+ todo:
+  sf - zu klein und zeigt auch binäre dateien an
+  // IWYU pragma: export //bei allen zeilen in header dateien wo #include "..generated" vorkommt:
+  #include "master/tpsi_line_generated_list.h" // IWYU pragma: export
+  passt das encoding?
+ 
+ 
+ Setup: 53:29
+ Neovim LUA Resources: 57:18
+ 
+ 
+ 
+ C++ Coding with Neovim cppcon 2022 Prateek Raman
+ 
+  - CD
+  
+
+zoxide - cd mit Magie
+
+268% Higher Failure Rates For Agile software projects
+
+require'lspconfig'.clangd.setup{}
+
+git clone https://github.com/kingShazor/kickstart.nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+
+
+vim-tutorial
+- *Learn Vim Progressively*:
+  https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+- *Learning Vim in 2014*:
+  https://benmccormick.org/learning-vim-in-2014/
+- *Vimcasts*:
+  http://vimcasts.org/
+- *Vim Video-Tutorials by Derek Wyatt*:
+  http://derekwyatt.org/vim/tutorials/
+- *Learn Vimscript the Hard Way*:
+  https://learnvimscriptthehardway.stevelosh.com/
+- *7 Habits of Effective Text Editing*:
+  https://www.moolenaar.net/habits.html
+- *vim-galore*:
+  https://github.com/mhinz/vim-galore
+
+
