@@ -1,0 +1,45 @@
+BasedOnStyle: LLVM
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+AllowShortIfStatementsOnASingleLine: false
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: None
+
+SpacesInExpressions:
+  Keywords: true
+  TemplateFunctions: false
+  FunctionCalls: false
+  AfterControlStatementKeyword: true
+  BeforeOpenParen: false
+  AfterOpenParen: true
+  BeforeCloseParen: true
+  BeforeColonInBaseClause: true
+  BeforeColonInCaseLabel: false
+  SpacesInAngles: true
+
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  BeforeNonEmptyParentheses: false
+
+SpacesInParens: Custom
+SpacesInParensOptions:
+  ExceptDoubleParentheses: false
+  InConditionalStatements: true
+  InEmptyParentheses: true
+
+SpacesInLineCommentPrefix:
+  Minimum = 1
+  Maximium -1
+
+SpaceBeforeAssignmentOperators: true
+
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpacesBeforeBinaryOperators: false
+SpacesBeforeColon: true
+SpaceBeforeInheritanceColon: true
+SpacesBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpacesInSquareBrackets: true
