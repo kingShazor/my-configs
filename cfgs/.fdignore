@@ -1,1 +1,4 @@
 .git/
+cmake_builds/
+__pycache__/
+*.png
