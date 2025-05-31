@@ -1,0 +1,99 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "ctp-frappe"
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[icons]
+icons = "none"
+[icons.overrides]
+bat = ["|E|", "|_|", "|=|", "|F|"]
+bat_charging = "|^| "
+
+[[block]]
+block = "cpu"
+info_cpu = 100.0
+warning_cpu = 100.0
+critical_cpu = 100.0
+[block.theme_overrides]
+idle_bg = "#402628"  # burgundy
+idle_fg = "#e78284"  # Catppuccin red
+
+#[[block]]
+#block = "temperature"
+#scale = "celsius"
+#format = " $icon $max "
+#format_alt = " $icon $min min, $max max, $average avg "
+#interval = 10
+#[block.theme_overrides]
+#idle_bg = "#3e3d5c"  # mauve-violett
+#idle_fg = "#ca9ee6"  # Catppuccin mauve
+# color = "#ca9ee6"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 60
+warning = 20.0
+alert = 10.0
+format = " SSD $available.eng(w:2) "
+[block.theme_overrides]
+idle_bg = "#2c2e34"  # leicht neutral-grau
+idle_fg = "#f2d5cf"  # rosewater (für Lesbarkeit & Kontrast)
+
+[[block]]
+block = "memory"
+interval = 10
+format = " $icon $mem_avail.eng(w:3,u:B) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+[block.theme_overrides]
+#idle_bg = "#2b3328"  # tiefes moosgrün
+#idle_fg = "#a6d189"  # sanftes grün (Frappe)
+#idle_bg = "#3e3d5c"  # dunkles Mauve
+#idle_fg = "#ca9ee6"  # Catppuccin mauve
+#idle_fg = "#403446"  # aubergine-braun
+idle_bg = "#303446"  # dunkles Grau-Blau aus Frappe für guten Kontrast
+idle_fg = "#a68a64"  # heller, milchiger Braunton (Kaffeebraun)
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+[block.theme_overrides]
+idle_bg = "#30314c"  # dunkles Blauviolett
+idle_fg = "#8caaee"  # Catppuccin blue
+
+[[block]]
+block = "net"
+interval = 3600
+device = "wlp4s0"
+format = " {$ssid $frequency|Wired connection} "
+[block.theme_overrides]
+idle_bg = "#1e2030"  # deep navy (BG)
+idle_fg = "#7dcfff"  # bright cyan (FG)
+
+[[block]]
+block = "battery"
+interval = 60
+format = " BAT $percentage {$time_remaining.dur(hms:true, min_unit:m) |}"
+good = 99
+info = 5
+warning = 4
+critical = 1
+[block.theme_overrides]
+idle_bg = "#2b3328"
+idle_fg = "#a6d189"
+
+[[block]]
+block = "time"
+interval = 60
+format = " $timestamp.datetime(f:'%a %d.%m %R', l:de_DE) "
+[block.theme_overrides]
+idle_bg = "#303446"  # dark slate (BG)
+idle_fg = "#f2d5cf"  # rosewater (FG)
+
