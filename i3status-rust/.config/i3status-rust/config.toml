@@ -49,7 +49,7 @@ idle_fg = "#f2d5cf"  # rosewater (für Lesbarkeit & Kontrast)
 [[block]]
 block = "memory"
 interval = 10
-format = " $icon $mem_avail.eng(w:3,u:B) "
+format = " $icon $mem_avail.eng(w:4,u:B) "
 format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
 [block.theme_overrides]
 #idle_bg = "#2b3328"  # tiefes moosgrün
@@ -72,10 +72,10 @@ idle_fg = "#8caaee"  # Catppuccin blue
 [[block]]
 block = "net"
 interval = 3600
-device = "wlp4s0"
+device = "wlp1s0"
 format = " Wlan "
 format_alt = " {$ssid $frequency|Wired connection} "
-[block.theme_overrides]
+[block.theme_overrides ]
 idle_bg = "#1e1e2e"  # deep navy (BG)
 idle_fg = "#7dcfff"  # bright cyan (FG)
 
