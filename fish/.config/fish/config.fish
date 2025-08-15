@@ -7,12 +7,20 @@ if status is-interactive
     set -xg EDITOR nvim
     set -x PATH $HOME/bin $PATH
     set -x PAGER less.sh
+    set -x PATH ~/.atuin/bin $PATH
+    set -x PATH ~/go/bin $PATH
+    set -x PATH /snap/bin $PATH
     #set -x DISPLAY ""
     if not contains $HOME/.local/bin $PATH
         set -Ux PATH $PATH $HOME/.local/bin
+    end 
+    atuin init fish | source
+    if test -f ~/abbr.fish
+        source ~/abbr.fish
     end
-
-    # Sourcen der Setup-Datei
-    source /home/pme/.config/tps_dev_setup/profile
 end
+
+# Sourcen der Setup-Datei
+source /home/pme/.config/tps_dev_setup/profile
+# end
 alias ls='ls -la'
