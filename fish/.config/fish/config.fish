@@ -13,8 +13,10 @@ if status is-interactive
     end
     set -x PATH ~/go/bin $PATH
     set -x PATH /snap/bin $PATH
-    set -x PATH $HOME/.cargo/bin $PATH
-    #set -x DISPLAY ""
+    if test -d ~/.cargo/bin
+      set -x PATH ~/.cargo/bin $PATH
+    end
+    set -e DISPLAY 
     if not contains $HOME/.local/bin $PATH
         set -Ux PATH $PATH $HOME/.local/bin
     end 
@@ -29,3 +31,9 @@ if test -f /home/pme/.config/tps_dev_setup/profile
 end
 # end
 alias ls='ls -la'
+set -g fish_autosuggestion_enabled 1
+
+function make-flamegraph
+    perf script -i $argv[1] | ~/FlameGraph/stackcollapse-perf.pl > $argv[1].flat
+    and ~/FlameGraph/flamegraph.pl $argv[1].flat > $argv[1].svg
+end
