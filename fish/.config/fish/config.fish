@@ -7,12 +7,13 @@ if status is-interactive
     set -xg EDITOR nvim
     set -x PATH $HOME/bin $PATH
     set -x PAGER less.sh
-    if test -f ~/atuin/bin
+    if test -d ~/.atuin/bin
       set -x PATH ~/.atuin/bin $PATH
       atuin init fish | source
     end
     set -x PATH ~/go/bin $PATH
     set -x PATH /snap/bin $PATH
+    set -x PATH $HOME/.local/bin $PATH
     if test -d ~/.cargo/bin
       set -x PATH ~/.cargo/bin $PATH
     end
