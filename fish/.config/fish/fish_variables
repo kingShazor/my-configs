@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export --path PATH:/home/pme/\x2ecargo/bin\x1e/snap/bin\x1e/home/pme/go/bin\x1e/home/pme/bin\x1e/home/pme/\x2ecargo/bin\x1e/snap/bin\x1e/home/pme/go/bin\x1e/home/pme/bin\x1e/home/pme/\x2eatuin/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/games\x1e/usr/local/games\x1e/snap/bin\x1e/opt/hacon/dokugen/bin\x1e/opt/hacon/dokugen/bin\x1e/home/pme/\x2elocal/bin
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish

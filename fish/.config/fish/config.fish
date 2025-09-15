@@ -1,26 +1,19 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     zoxide init fish | source
-    set -x PATH $PATH /opt/hacon/dokugen/bin
+    # PATH-Einträge nur hinzufügen, wenn sie fehlen
+    for dir in $HOME/bin $HOME/.cargo/bin $HOME/.local/bin $HOME/.atuin/bin /usr/local/go/bin /snap/bin /opt/hacon/dokugen/bin /usr/bin
+        if test -d $dir
+            if not contains $dir $PATH
+                set -gx PATH $dir $PATH
+            end
+        end
+    end
     set -x RELBUILDROOT /opt/hacon/dokugen
     set -x BUILDROOT /opt/hacon/dokugen
     set -xg EDITOR nvim
-    set -x PATH $HOME/bin $PATH
     set -x PAGER less.sh
-    if test -d ~/.atuin/bin
-      set -x PATH ~/.atuin/bin $PATH
-      atuin init fish | source
-    end
-    set -x PATH ~/go/bin $PATH
-    set -x PATH /snap/bin $PATH
-    set -x PATH $HOME/.local/bin $PATH
-    if test -d ~/.cargo/bin
-      set -x PATH ~/.cargo/bin $PATH
-    end
     set -e DISPLAY 
-    if not contains $HOME/.local/bin $PATH
-        set -Ux PATH $PATH $HOME/.local/bin
-    end 
     if test -f ~/abbr.fish
         source ~/abbr.fish
     end
