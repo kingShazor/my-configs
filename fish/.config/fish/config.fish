@@ -12,7 +12,7 @@ if status is-interactive
     set -x RELBUILDROOT /opt/hacon/dokugen
     set -x BUILDROOT /opt/hacon/dokugen
     set -xg EDITOR nvim
-    set -x PAGER less.sh
+    # set -x PAGER less.sh
     set -e DISPLAY 
     if test -f ~/abbr.fish
         source ~/abbr.fish
