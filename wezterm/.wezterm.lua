@@ -10,4 +10,7 @@ config.window_padding = {
 	bottom = 0,
 }
 config.keys = { { key = "Enter", mods = "SUPER", action = wezterm.action.ToggleFullScreen } }
+config.use_ime = false
+config.use_dead_keys = false
+
 return config
