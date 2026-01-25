@@ -1,13 +1,14 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
-SETUVAR __fish_initialized:4300
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:vi_mode\x1epwd\x1egit
 SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1epython\x1ejava\x1eruby\x1ego\x1eaws
 SETUVAR --export fish_autosuggestion_enabled:1
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR tide_aws_bg_color:444444
 SETUVAR tide_aws_color:FF9900
 SETUVAR tide_aws_icon:\uf270
