@@ -1,10 +1,10 @@
 icons_format = "{icon}"
 
-[theme]
-theme = "ctp-frappe"
-[theme.overrides]
-idle_bg = "#123456"
-idle_fg = "#abcdef"
+# [theme]
+# theme = "ctp-frappe"
+# [theme.overrides]
+# idle_bg = "#123456"
+# idle_fg = "#abcdef"
 
 [icons]
 icons = "none"
@@ -62,12 +62,23 @@ idle_fg = "#a68a64"  # heller, milchiger Braunton (Kaffeebraun)
 
 [[block]]
 block = "sound"
+driver = "alsa"
 [[block.click]]
 button = "left"
-cmd = "pavucontrol"
+cmd = "qasmixer"
 [block.theme_overrides]
 idle_bg = "#1e1e2e"  # dunkles Blauviolett
 idle_fg = "#8caaee"  # Catppuccin blue
+
+[[block]]
+block = "net"
+interval = 3600
+device = "wlx8c902d507de0"
+format = " Wlan "
+format_alt = " {$ssid $frequency|Wired connection} "
+[block.theme_overrides ]
+idle_bg = "#1e1e2e"  # deep navy (BG)
+idle_fg = "#7dcfff"  # bright cyan (FG)
 
 [[block]]
 block = "time"
