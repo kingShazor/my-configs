@@ -8,6 +8,7 @@ SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:vi_mode\x1epwd\x1egit
 SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1epython\x1ejava\x1eruby\x1ego\x1eaws
 SETUVAR --export fish_autosuggestion_enabled:1
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR tide_aws_bg_color:444444
 SETUVAR tide_aws_color:FF9900
 SETUVAR tide_aws_icon:\uf270
