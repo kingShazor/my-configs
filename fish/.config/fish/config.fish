@@ -3,7 +3,7 @@ if status is-interactive
     zoxide init fish | source
     atuin init fish | source
     # PATH-Einträge nur hinzufügen, wenn sie fehlen
-    for dir in $HOME/bin $HOME/.cargo/bin $HOME/.local/bin /usr/local/go/bin /snap/bin /opt/hacon/dokugen/bin /usr/bin /usr/sbin/
+    for dir in $HOME/bin $HOME/.cargo/bin $HOME/.local/bin /usr/local/go/bin /snap/bin /opt/hacon/dokugen/bin /usr/bin /usr/sbin/ $HOME/.npm-global/bin
         if test -d $dir
             if not contains $dir $PATH
                 set -gx PATH $dir $PATH
