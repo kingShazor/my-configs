@@ -3,7 +3,7 @@ if status is-interactive
     zoxide init fish | source
     atuin init fish | source
     # PATH-Einträge nur hinzufügen, wenn sie fehlen
-    for dir in $HOME/bin $HOME/.cargo/bin $HOME/.local/bin /usr/local/go/bin /snap/bin /opt/hacon/dokugen/bin /usr/bin /usr/sbin/ $HOME/.opencode/bin $HOME/.npm-global/bin ~/go/bin
+    for dir in $HOME/bin $HOME/.cargo/bin $HOME/.local/bin /usr/local/go/bin /snap/bin /opt/hacon/dokugen/bin /usr/bin /usr/sbin/ $HOME/.opencode/bin $HOME/.npm-global/bin ~/go/bin /usr/local/zig
         if test -d $dir
             if not contains $dir $PATH
                 set -gx PATH $dir $PATH
@@ -18,7 +18,7 @@ if status is-interactive
     if test -f ~/abbr.fish
         source ~/abbr.fish
     end
-  atuin init fish | source
+    atuin init fish | source
 end
 
 # Sourcen der Setup-Datei
@@ -29,7 +29,15 @@ end
 alias ls='ls -la'
 set -g fish_autosuggestion_enabled 1
 
+set -x TERM tmux-256color
+
 function make-flamegraph
     perf script -i $argv[1] | ~/FlameGraph/stackcollapse-perf.pl > $argv[1].flat
     and ~/FlameGraph/flamegraph.pl $argv[1].flat > $argv[1].svg
+end
+
+# opencode
+fish_add_path $HOME/.opencode/bin
+if test -S $HOME/.ssh/ssh-agent.socket
+  set -x SSH_AUTH_SOCK $HOME/.ssh/ssh-agent.socket
 end
